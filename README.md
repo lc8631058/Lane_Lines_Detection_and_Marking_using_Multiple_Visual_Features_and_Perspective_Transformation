@@ -154,8 +154,4 @@ Here I'll talk about the approach I took, what techniques I used, what worked an
 
 This project I use a combine slection approach to select the binary image of each frame, at the first frame I need to apply a sliding window search of total image, after that I will search for the lane line based on searched results of the first frame.
 
-Here I have some problems:
 
-1. Here I wonder should the `dst` and `src` points be dynamic detected or presupposed?
-
-2. How could I adjust my approach to let it accomplish the other 2 challenging videos? 
