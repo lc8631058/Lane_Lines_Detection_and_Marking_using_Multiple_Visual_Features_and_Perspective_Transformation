@@ -31,13 +31,9 @@ The goals / steps of this project are the following:
 
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
-
 ### Camera Calibration
 
-#### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
+#### 1. Briefly state how to compute the camera matrix and distortion coefficients. 
 
 The code for this step is contained in the 2-th and 3-th code cells of the IPython notebook located in "./P4 Advanced Lane Lines Detection.ipynb".
 
@@ -63,7 +59,7 @@ After undistort:
 
 ![alt text][image3]
 
-#### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
+#### 2. Describe how I used color transforms, gradients or other methods to create a thresholded binary image.
 
 To create the thresholded binary image, we have many methods (After the cells with title 'Use color transforms, gradients, etc., to create a thresholded binary image').
 
@@ -81,7 +77,7 @@ I used a combination of HLS, gradient direction and magnitude of Sobel operator 
 
 ![alt text][image4]
 
-#### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
+#### 3. Describe how I performed a perspective transform and provide an example of a transformed image.
 
 The code for my perspective transform located in the cells with title, the code includes a function called `corners_unwarp()`, which appears in the first code cell with the title "Apply a perspective transform to rectify binary image".  The `corners_unwarp()` function takes as inputs an image (`undistorted_gray_img`), as well as source (`src`) and destination (`dst`) points.  
 
@@ -104,18 +100,18 @@ Here is the wraped images:
 
 ![alt text][image5]
 
-#### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+#### 4. Describe how I identified lane-line pixels and fit their positions with a polynomial?
 
 I use `sliding_window_search` function to find the lane line in the first frame of video. 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this (Cells with title "Detect lane pixels and fit to find the lane boundary"):
 
 ![alt text][image7]
 
-#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+#### 5. Describe how I calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in the code cells with title "From now, let's test on videos", the `calculate_curvature_radius` function calculates the curvature of lane line and the function `process_frames` estimates the bias of vehicle's position from center.
 
-#### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+#### 6. Provide an example image of my result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in `process_frames` function on every frames of video.  Here is an example of my result on a test image:
 
@@ -125,7 +121,7 @@ I implemented this step in `process_frames` function on every frames of video.  
 
 ### Pipeline (video)
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+#### 1. Provide a link to my final video output.  
 
 Here's a [link to my video result](./test_video_output/project_video.mp4)
 
@@ -133,7 +129,7 @@ Here's a [link to my video result](./test_video_output/project_video.mp4)
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 1. Briefly discuss any problems / issues I faced in my implementation of this project.
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
