@@ -85,22 +85,7 @@ I used a combination of HLS, gradient direction and magnitude of Sobel operator 
 
 The code for my perspective transform located in the cells with title, the code includes a function called `corners_unwarp()`, which appears in the first code cell with the title "Apply a perspective transform to rectify binary image".  The `corners_unwarp()` function takes as inputs an image (`undistorted_gray_img`), as well as source (`src`) and destination (`dst`) points.  
 
-#### Actually I didn't chose the hardcode the source and destination points in the following manner:
-
-```python
-src = np.float32(
-    [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
-    [((img_size[0] / 6) - 10), img_size[1]],
-    [(img_size[0] * 5 / 6) + 60, img_size[1]],
-    [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
-dst = np.float32(
-    [[(img_size[0] / 4), 0],
-    [(img_size[0] / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), 0]])
-```
-
-I just chose the `src` and `dst` empirically:
+#### I chose the `src` and `dst` experimentally and empirically:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
