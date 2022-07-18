@@ -63,11 +63,11 @@ After undistort:
 
 To create the thresholded binary image, we have many methods (After the cells with title 'Use color transforms, gradients, etc., to create a thresholded binary image').
 
-(1) Absolute Sobel Operator. This method take the derivatiive in the x or y orient of the gray-scale image, x or y could be presupposed by yourself, and apply absolute operation to calculated gradient. Then you will set the minimal and maximal thresholds, the absoluted grdient values which satisfy the thresholds will be judged as 1, otherwise 0, then we get the binary image.
+(1) Absolute Sobel Operator. This method take the derivative in the x or y orient of the gray-scale image, x or y could be presupposed by yourself, and apply absolute operation to calculated gradient. Then you will set the minimal and maximal thresholds, the absoluted grdient values which satisfy the thresholds will be judged as 1, otherwise 0, then we get the binary image.
 
 (2) Magnitude of Sobel Operator. This method calculate the magnitude using sobel on x and on y orients. And then it applies the same process as (1).
 
-(3) Gradients direction. Firt calculate the gray-scale image, then calculate gradient on both x and y orients, take absolute values of them. Use arctan to calculate the direction of the gradients, use thresholds to select pixels from the calculated direction mask, note that these thresholds should be angles.
+(3) Gradients direction. First calculate the gray-scale image, then calculate gradient on both x and y orients, take absolute values of them. Use arctan to calculate the direction of the gradients, use thresholds to select pixels from the calculated direction mask, note that these thresholds should be angles.
 
 (4) HLS Selection. Simply convert the RGB or BGR image to HLS scale, apply the thresholds to HLS-scaled image.
 
